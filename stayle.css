@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    font-family: "franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background: url(./emage/321400604.jpg);
+    background-position: center;
+}
+
+.navbar{
+    background-color: rgba(13, 10, 180, 0.637);
+    width: 100%;
+    height: 80px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.logo{
+   position: relative;
+}
+.logo h2{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 52px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.logo h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #021cff;
+}
+.logo h2:nth-child(2){
+    color: #00ff95;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate{
+    0%,100%{
+        clip-path: polygon(0% 49%, 10% 44%, 20% 44%, 31% 48%, 42% 57%, 57% 62%, 69% 60%, 83% 61%, 99% 59%, 100% 100%, 51% 100%, 0 100%);
+    }
+     50%{
+        clip-path: polygon(0 61%, 9% 61%, 17% 61%, 36% 63%, 50% 60%, 64% 49%, 79% 43%, 90% 45%, 100% 51%, 100% 100%, 51% 100%, 0 100%);
+    }
+}
+.navbar ul{
+    float: right;
+}
+.navbar ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0.5px;
+}
+.navbar ul li a{
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+.active, a:hover{
+    background-color: aqua;
+    transition: 0.5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media all and (max-width: 952px) {
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .navbar ul li a {
+        font-size: 16px;
+    }
+}
+@media all and (max-width: 858px){
+    .container{
+        width: 100%;
+    }
+    .container{
+    padding: 0.30px;
+}
+.checkbtn{
+    display: block;
+}
+ul{
+    position: fixed;
+width: 30%;
+height: 70vh;
+background-color: rgba(6, 201, 250, 0.212);
+top: 80px;
+right: -100%;
+border-radius: 10px;
+text-align: center;
+transition: all 0.5s;
+}
+
+.navbar ul li {
+    display: block;
+margin: 50px 0;
+line-height: 30px;
+}
+.navbar ul li a {
+    font-size: 20px;
+}
+a:hover .active {
+    background: none;
+}
+#check:checked ~ ul {
+    right: 0;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #0082e600;
+}
+
+}
