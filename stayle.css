@@ -14,6 +14,8 @@ body{
     font-family: "franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     background: url(./emage/321400604.jpg);
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .navbar{
@@ -43,6 +45,113 @@ body{
 .logo h2:nth-child(2){
     color: #00ff95;
     animation: animate 4s ease-in-out infinite;
+}
+form{
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: 2px solid white;
+    border-radius: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(2px);
+}
+.in1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+    height: 25px;
+    border-bottom: 2px solid white;
+}
+.in2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+    height: 25px;
+    border-bottom: 2px solid white;
+}
+#inp1{
+    position: absolute;
+    width: 90%;
+    height: 20px;
+    border: none;
+    background: none;
+    outline: none;
+}
+#inp2{
+    position: absolute;
+    width: 90%;
+    height: 20px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.in1 label{
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    transition: .5s;
+    pointer-events: none;
+}
+#inp1:focus ~ label,#inp1:valid ~ label{
+    top: -90%;
+}
+.in2 label{
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    transition: .5s;
+    pointer-events: none;
+}
+#inp2:focus ~ label,#inp2:valid ~ label{
+    top: -90%;
+}
+.in1 ion-icon{
+    font-size: 25px;
+    position: absolute;
+    left: 238px;
+    top: -10%;
+}
+.in2 ion-icon{
+    font-size: 25px;
+    position: absolute;
+    left: 238px;
+    top: -20%;
+}
+form h1{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+form h5{
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+#inp3{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 25px;
+    border: none;
+    border-radius: 16px;
+    background-color: rgb(119, 238, 238);
+    cursor: pointer;
+}
+#inp3:hover{
+    background-color: white;
 }
 @keyframes animate{
     0%,100%{
